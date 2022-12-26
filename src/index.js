@@ -28,27 +28,25 @@ const inputs = (() => {
     }
 
     const storeInput = () => {
-        console.log(readInput.inputData)
+        console.log(readInput())
     }
 
-    // const storeBtnLogic = () => {
-    //     const storeButton = document.getElementById('storeButton')
-    //     storeButton.addEventListener('click', storeInput)
-    // }
+    const storeBtnLogic = () => {
+        const storeButton = document.getElementById('storeButton')
+        storeButton.addEventListener('click', storeInput)
+    }
 
 
 
     return {
         createInput,
         readInput,
-        storeInput,
-        // storeBtnLogic,
+        storeBtnLogic,
     }
 })();
 
 inputs.createInput()
 inputs.readInput()
-inputs.storeInput()
-// inputs.storeBtnLogic()
+inputs.storeBtnLogic()
 
 
