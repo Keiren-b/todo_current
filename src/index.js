@@ -24,7 +24,7 @@ const inputs = (() => {
     const readInput = () => {
         let inputData = []
         inputData.push(document.getElementById('title').value)
-        return {inputData}
+        return inputData
     }
 
     const storeInput = () => {
