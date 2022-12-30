@@ -27,26 +27,31 @@ const inputs = (() => {
         return inputData
     }
 
-    const storeInput = () => {
-        console.log(readInput())
+    const storeInput = (task) => {
+        if (localStorage.getItem(task)!=null){
+            alert("This Task Already Exists. Choose another name")
+            return
+            }
+            else{
+            localStorage.setItem(task, JSON.stringify(task))
+            }
     }
 
     const storeBtnLogic = () => {
         const storeButton = document.getElementById('storeButton')
-        storeButton.addEventListener('click', storeInput)
+        storeButton.addEventListener('click', storeInput(readInput()))
     }
-
-
+    
 
     return {
         createInput,
         readInput,
+        storeInput,
         storeBtnLogic,
     }
 })();
 
 inputs.createInput()
-inputs.readInput()
 inputs.storeBtnLogic()
 
 
