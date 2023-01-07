@@ -8,6 +8,7 @@ const inputs = (() => {
         const inputContainer = document.createElement('div')
         inputContainer.setAttribute('id', 'inputContainer')
         mainContainer.appendChild(inputContainer)
+        mainContainer.classList.add('hello')
 
         const clearStorage = document.createElement('button')
         clearStorage.textContent = 'Clear Storage'
